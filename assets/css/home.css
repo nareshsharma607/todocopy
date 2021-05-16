@@ -1,0 +1,45 @@
+body{
+text-align: center;  
+background-color: gray;  
+}
+#task-list{
+    position: relative;
+    left: 30vw;;
+    height: 40vw;
+    width: 30vw;
+    background-color: white;
+    color: gray;
+}
+li{
+    background-color: cornsilk;
+    text-align: left;
+    list-style:none;
+    width: 25vw;;
+    height: auto;
+    
+}
+
+p{
+    display: inline-block;
+}   
+.delete button{
+    background-color: rgba(247, 117, 117, 0.733);
+    
+
+}
+.task-date{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+} 
+.task{
+    font-size: 1.5vw;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+}
+.radio{
+    font-size: 5rem;
+}
+    

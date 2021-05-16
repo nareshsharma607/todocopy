@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>TO DO App</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <div id="task-list">
+        <h1><i class="fas fa-clipboard-list">&nbsp</i>My To do List</h1>
+        <%for(let i=0;i<task_List.length;i++){%>
+           <ul>
+            <div class="main">
+                <div class="delete">
+                    <a href="/delete-task/?id=<%=task_List[i]._id %>"><button>X</button></a>
+                </div>
+            <li>
+               
+                <div class="task-date">
+                <div>
+                <p class="task"><%= task_List[i].task %></p>
+                </div>
+                <div>
+                <p class="date"> <i class="far fa-calendar-minus"></i> &nbsp<%=  task_List[i].date %></p>
+                </div>
+            </div>
+        </div>
+            </li>
+            
+        
+        </ul>
+
+        <%}%>
+        
+        <form action="/practice" method="POST">
+            <input type="date" name="date">
+            <input type="text" name="task" placeholder="Task" required>
+            <button type="submit">Add Task</button>
+
+        </form>
+
+        
+
+    </div>
+    
+</body>
+</html>
